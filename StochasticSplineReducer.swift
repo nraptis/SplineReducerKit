@@ -47,7 +47,7 @@ public class StochasticSplineReducer {
     var testPointsXB = [Float]()
     var testPointsYB = [Float]()
     
-    var internalSpline = MathKit.AutomaticSpline()
+    var internalSpline = AutomaticSpline()
     
     let pathChopper = StochasticSplineReducerPathChopper()
     let exploredPool = StochasticSplineReducerExploredPool()
@@ -66,8 +66,8 @@ public class StochasticSplineReducer {
         purgeTestBuckets()
     }
     
-    public func reduce(inputSpline: MathKit.ManualSpline,
-                       outputSpline: MathKit.ManualSpline,
+    public func reduce(inputSpline: ManualSpline,
+                       outputSpline: ManualSpline,
                        numberOfPointsSampledForEachControlPoint: Int,
                        programmableCommands: [StochasticSplineReducerCommand]) {
         

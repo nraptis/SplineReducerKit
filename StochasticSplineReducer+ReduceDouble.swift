@@ -162,18 +162,6 @@ extension StochasticSplineReducer {
                 break
             }
         }
-        
-        
-        if KP_successCount > 0 {
-            print("***COMPLETE (REDUCE DOUBLE)*** ===> SUCCESS!")
-        } else {
-            print("***COMPLETE (REDUCE DOUBLE)*** ===> FAILURE!")
-        }
-        print("(REDUCE DOUBLE) => KP_tryCount = \(KP_tryCount) / \(tryCount), tolerance = \(tolerance)")
-        //print("ReduceDouble => KP_attemptCount = \(KP_attemptCount)")
-        //print("ReduceDouble => KP_successCount = \(KP_successCount)")
-        //print("ReduceDouble => KP_failureCount = \(KP_failureCount)")
-        
     }
     
     

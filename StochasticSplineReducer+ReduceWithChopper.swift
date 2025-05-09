@@ -69,18 +69,15 @@ extension StochasticSplineReducer {
         for bucketIndex in 0..<bucketCount {
             let bucket = buckets[bucketIndex]
             if bucket.numberOfCombinedbuckets > 1 {
-                print("SKIPPING! We can only do ReduceChopper on buckets with exactly one combined bucket.")
                 return
             }
         }
         
         let toleranceSquared = tolerance * tolerance
         
-        if !pathChopper.build(pathLength: bucketCount,
+        _ = pathChopper.build(pathLength: bucketCount,
                               minimumStep: minimumStep,
-                              maximumStep: maximumStep) {
-            print("Path chopper could not build!")
-        }
+                              maximumStep: maximumStep)
         
         exploredPool.clear()
         
@@ -142,19 +139,6 @@ extension StochasticSplineReducer {
             }
         }
         
-        if chopperBestPathCount > 0 && bestDistanceSquaredSoFar < toleranceSquared {
-            print("***COMPLETE (CHOPPER)*** ===> SUCCESS!")
-        } else {
-            print("***COMPLETE (CHOPPER)*** ===> FAILURE! dist \(sqrtf(bestDistanceSquaredSoFar)) / \(tolerance)")
-        }
-        
-        print("(CHOPPER) => KP_tryCount = \(KP_tryCount) / \(tryCount) (min = \(minimumStep), max = \(maximumStep))")
-        print("ReduceChopper => KP_attemptCount = \(KP_attemptCount)")
-        print("ReduceChopper => KP_successCount = \(KP_successCount)")
-        print("ReduceChopper => KP_failureCount = \(KP_failureCount)")
-        print("ReduceChopper => KP_invalidRetryCount = \(KP_invalidRetryCount)")
-        print("ReduceChopper => KP_dupeRetryCount = \(KP_dupeRetryCount)")
-
         if chopperBestPathCount > 0 && bestDistanceSquaredSoFar < toleranceSquared {
             loadUpTestBucketsFromPathBestPath()
             transferTestBucketsToBuckets()

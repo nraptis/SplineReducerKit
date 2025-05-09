@@ -96,17 +96,4 @@ class StochasticSplineReducerPathChopper {
             }
         }
     }
-    
-    func printPath() {
-        
-        var _path = [Int]()
-        for pathIndex in 0..<pathCount {
-            let number = path[pathIndex]
-            _path.append(number)
-        }
-        
-        print("Path: \(_path)")
-        
-        
-    }
 }

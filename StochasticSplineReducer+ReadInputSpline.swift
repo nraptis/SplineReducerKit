@@ -11,7 +11,7 @@ import MathKit
 extension StochasticSplineReducer {
     
     // [S.R. Czech] 12-3-2024: This function works as intended.
-    func readInputSpline(inputSpline: MathKit.ManualSpline,
+    func readInputSpline(inputSpline: ManualSpline,
                          numberOfPointsSampledForEachControlPoint: Int) {
         
         if numberOfPointsSampledForEachControlPoint < StochasticSplineReducer.minNumberOfSamples { return }

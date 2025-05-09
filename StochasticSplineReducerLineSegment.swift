@@ -27,7 +27,7 @@ class StochasticSplineReducerSegment {
         directionX = x2 - x1
         directionY = y2 - y1
         lengthSquared = directionX * directionX + directionY * directionY
-        if lengthSquared > MathKit.Math.epsilon {
+        if lengthSquared > Math.epsilon {
             length = sqrtf(lengthSquared)
             directionX /= length
             directionY /= length
@@ -41,7 +41,7 @@ class StochasticSplineReducerSegment {
     func distanceSquaredToClosestPoint(_ x: Float, _ y: Float) -> Float {
         let factor1X = x - x1
         let factor1Y = y - y1
-        if lengthSquared > MathKit.Math.epsilon {
+        if lengthSquared > Math.epsilon {
             let scalar = directionX * factor1X + directionY * factor1Y
             if scalar <= 0.0 {
                 let diffX = x1 - x

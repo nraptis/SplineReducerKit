@@ -147,19 +147,6 @@ extension StochasticSplineReducer {
                 break
             }
         }
-        
-        if KP_successCount > 0 {
-            print("***COMPLETE (REDUCE SINGLE)*** ===> SUCCESS!")
-        } else {
-            print("***COMPLETE (REDUCE SINGLE)*** ===> FAILURE!")
-        }
-        print("(REDUCE SINGLE) => KP_tryCount = \(KP_tryCount) / \(tryCount), tolerance = \(tolerance)")
-        
-        //print("ReduceSingle => tolerance = \(tolerance) (squared = \(toleranceSquared))")
-        //print("ReduceSingle => maxCombinedPouches = \(maxCombinedPouches)")
-        //print("ReduceSingle => KP_attemptCount = \(KP_attemptCount)")
-        //print("ReduceSingle => KP_successCount = \(KP_successCount)")
-        //print("ReduceSingle => KP_failureCount = \(KP_failureCount)")
     }
     
     //  Start: [a]...[bucketIndex]...[b]...[c]

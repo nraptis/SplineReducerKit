@@ -107,7 +107,7 @@ extension StochasticSplineReducer {
                     let l2_y1 = testPointsYA[checkIndex]
                     let l2_x2 = testPointsXA[checkIndex + 1]
                     let l2_y2 = testPointsYA[checkIndex + 1]
-                    if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: l1_x1,
+                    if Math.lineSegmentIntersectsLineSegment(line1Point1X: l1_x1,
                                                              line1Point1Y: l1_y1,
                                                              line1Point2X: l1_x2,
                                                              line1Point2Y: l1_y2,
