@@ -66,8 +66,8 @@ public class StochasticSplineReducer {
         purgeTestBuckets()
     }
     
-    public func reduce(inputSpline: ManualSpline,
-                       outputSpline: ManualSpline,
+    public func reduce(inputSpline: FancySpline,
+                       outputSpline: FancySpline,
                        numberOfPointsSampledForEachControlPoint: Int,
                        programmableCommands: [StochasticSplineReducerCommand]) {
         
